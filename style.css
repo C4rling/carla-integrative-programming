@@ -1,22 +1,72 @@
-.head {
+/* Hero container with background image */
+.hero {
+    background-image: url('img/sky.jfif'); 
+    background-size: cover;       /* make image cover the container */
+    background-position: center;  
+    background-repeat: no-repeat;
+    min-height: 100vh;           
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      
+    align-items: center;          
     text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative;
 }
 
-.lorem {
-    color: black;
-    text-align: center;
+.hero::before {
+    content: '';
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.4); /* semi-transparent overlay */
+    z-index: 0;
 }
 
-.delete {
-    background-color: antiquewhite;
-    color: darkslateblue;
-    font-weight: 800;
+.title, .description, .button-container {
+    position: relative; /* ensures content stays above overlay */
+    z-index: 1;
+    
+}
+
+/* Title styling */
+.title {
+    color: rgb(255, 255, 255); 
+    font-family: serif;
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+}
+
+/* Description styling */
+.description {
+    text-align: justify;
+    margin: 0 10%;
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 5px;
-    border-color: black;
+    margin-bottom: 20px; /* spacing between description and button */
 }
 
-.buttoncontainer {
+/* Button styling */
+.button {
+    background-color: rgb(255, 231, 97); 
+    color: rgb(210, 130, 1);
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.button:hover {
+    transform: translateY(-5px); /* lift button up */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); 
+    background-color: rgb(244, 219, 35);
+}
+
+/* Button container for centering */
+.button-container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
