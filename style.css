@@ -240,7 +240,7 @@ footer {
   background: #0056b3;
 }
 
-/* Text + links */
+
 .auth-text {
   margin-top: 15px;
   font-size: 14px;
@@ -250,4 +250,83 @@ footer {
   color: #fff;
   font-weight: 500;
   text-decoration: underline;
+}
+/* Profile section spacing */
+.profile-section {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 60px;
+  padding: 80px 60px;
+  background: linear-gradient(180deg, #f6f0ff, #ffffff);
+}
+
+/* Profile card */
+.profile-card {
+  width: 320px;
+  height: 400px;
+  text-align: center;
+}
+
+/* Avatar styling */
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #e6ccff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile name */
+.profile-card h3 {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  color: #6a0dad;
+}
+
+/* Profile details */
+.profile-card p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Profile info */
+.profile-info {
+  width: 420px;
+  height: 400px;
+  text-align: left;
+}
+
+.profile-info h3 {
+  color: #6a0dad;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.profile-info p {
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* Settings button */
+.settings-btn {
+  display: block;
+  text-align: center;
+  padding: 14px 30px;
+  border-radius: 60px;
+  background: linear-gradient(135deg, #6a0dad, #b87cca);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.settings-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(106, 13, 173, 0.35);
 }

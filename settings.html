@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h2>Settings</h2>
+    <nav>
+      <a href="profile.html">Back to Profile</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <section class="features" style="min-height: 80vh;">
+
+    <div class="box" style="width: 420px; text-align: left;">
+      <h3>Account Settings</h3>
+
+      <form>
+
+        <!-- Change Email -->
+        <label style="display:block; margin-top:20px; font-weight:500;">
+          Change Email
+        </label>
+        <input type="email" placeholder="you@example.com"
+               style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ccc;">
+        <small style="color:#777;">
+          Synced with external identity provider in future phases.
+        </small>
+
+        <!-- Change Address -->
+        <label style="display:block; margin-top:20px; font-weight:500;">
+          Change Address
+        </label>
+        <input type="text" placeholder="Your address"
+               style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ccc;">
+        <small style="color:#777;">
+          Geographic data binding will be introduced in future builds.
+        </small>
+
+        <!-- Change Password -->
+        <label style="display:block; margin-top:20px; font-weight:500;">
+          Change Password
+        </label>
+        <input type="password" placeholder="New password"
+               style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ccc;">
+        <small style="color:#777;">
+          Argon2id hashing with memory-hard parameters will be activated later.
+        </small>
+
+        <!-- Theme Option -->
+        <label style="display:block; margin-top:20px; font-weight:500;">
+          Theme
+        </label>
+        <select
+          style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ccc;">
+          <option>Light</option>
+          <option>Dark</option>
+          <option>Purple (Default)</option>
+        </select>
+
+        <!-- Save Button -->
+        <button type="button"
+                style="margin-top:30px; width:100%; padding:14px;
+                border:none; border-radius:30px;
+                background:linear-gradient(135deg,#6a0dad,#b87cca);
+                color:white; font-size:16px; cursor:pointer;">
+          Save Changes
+        </button>
+
+      </form>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Your App · Settings
+  </footer>
+
+</body>
+</html>
