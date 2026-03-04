@@ -10,24 +10,30 @@
   <div class="auth-box">
     <h2>Login</h2>
 
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
+    <form id="loginForm">
 
-    <a href="profile.html">
-  <button>Log In</button>
-</a>
+      <input type="email" id="loginEmail" placeholder="Email">
+      <small class="error" id="loginEmailError"></small>
 
+      <input type="password" id="loginPassword" placeholder="Password">
+      <small class="error" id="loginPasswordError"></small>
+
+      <button type="submit">Log In</button>
+
+    </form>
 
     <p class="auth-text">
       Don’t have an account?
       <a href="signin.html">Sign up</a>
     </p>
-        <a href="index.html">
-  <button>Back to Home</button>
-</a>
+
+    <a href="index.html">
+      <button type="button">Back to Home</button>
+    </a>
 
   </div>
 
+  <script src="login.js"></script>
+
 </body>
 </html>
-

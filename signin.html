@@ -10,22 +10,36 @@
   <div class="auth-box">
     <h2>Sign Up</h2>
 
-    <input type="text" placeholder="Full Name">
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
-    <input type="password" placeholder="Confirm Password">
+    <form id="signupForm">
 
-    <button>Create Account</button>
+      <input type="text" id="fullname" placeholder="Full Name">
+      <small class="error" id="nameError"></small>
+
+      <input type="email" id="email" placeholder="Email">
+      <small class="error" id="emailError"></small>
+
+      <input type="password" id="password" placeholder="Password">
+      <small class="error" id="passwordError"></small>
+
+      <input type="password" id="confirmPassword" placeholder="Confirm Password">
+      <small class="error" id="confirmError"></small>
+
+      <button type="submit">Create Account</button>
+
+    </form>
 
     <p class="auth-text">
       Already have an account?
       <a href="login.html">Log in</a>
     </p>
+
     <a href="index.html">
-  <button>Back to Home</button>
-</a>
+      <button type="button">Back to Home</button>
+    </a>
 
   </div>
+
+  <script src="signup.js"></script>
 
 </body>
 </html>
