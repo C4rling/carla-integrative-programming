@@ -6,6 +6,19 @@
   font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  background-color: #f7f7fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================= */
+/* HEADER                        */
+/* ============================= */
 header {
   display: flex;
   justify-content: space-between;
@@ -13,6 +26,8 @@ header {
   padding: 20px 60px;
   background: #63298f;
   color: white;
+  position: relative;
+  z-index: 10;
 }
 
 header nav a {
@@ -27,14 +42,16 @@ header nav a:hover {
   color: #e0c8ff;
 }
 
+/* ============================= */
+/* HERO SECTION                  */
+/* ============================= */
 .hero {
-  height: 90vh;
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 80px;
   color: white;
-
   background: linear-gradient(-45deg, #c77dff, #6a0dad, #b87cca, #7b2cbf);
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
@@ -82,31 +99,32 @@ header nav a:hover {
 }
 
 .overlay-image {
-  transform: translateX(-150px); /* move further left */
+  transform: translateX(-150px);
   width: 150%;
   max-width: 900px;
   animation: float 4s ease-in-out infinite;
   filter: drop-shadow(0 0 20px rgba(255,255,255,0.5));
 }
 
-
+/* ============================= */
+/* FEATURES SECTION              */
+/* ============================= */
 .features {
-  margin-bottom: 0%;
-  display: flex;                 
+  min-height: 30vh;
+  display: flex;
   justify-content: center;
   align-items: stretch;
   gap: 40px;
-  padding: 70px;
+  padding: 50px;
   background: linear-gradient(180deg, #f6f0ff, #ffffff);
 }
 
 .box {
-  background-color: white;
-  padding: 35px;
   width: 260px;
-  min-width: 260px;
   text-align: center;
+  padding: 25px;
   border-radius: 18px;
+  background-color: rgb(156, 101, 202);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -117,30 +135,14 @@ header nav a:hover {
 }
 
 .box h3 {
-  color: #6a0dad;
+  color: #ffffff;
   margin-bottom: 12px;
   font-size: 1.3rem;
 }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  background: linear-gradient(135deg, #390768, #5a189a);
-  color: white;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
-}
-
+/* ============================= */
+/* CATEGORIES SECTION            */
+/* ============================= */
 .categories {
   padding: 20px 10px;
   background: #ffffff;
@@ -150,7 +152,7 @@ footer {
 .categories h2 {
   font-size: 2.2rem;
   margin-bottom: 30px;
-  margin-top: 0%;
+  margin-top: 0;
   color: #4b1c6f;
 }
 
@@ -188,79 +190,33 @@ footer {
   color: #555;
 }
 
-.auth-page {
-  margin: 0;
-  height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  background: url("img/purfle.jpg") no-repeat center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.auth-box {
-  width: 350px;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  color: #fff;
-}
-
-.auth-box input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-}
-
-.auth-box button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 8px;
-  background: #007bff;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.auth-box button:hover {
-  background: #0056b3;
-}
-
-
-.auth-text {
-  margin-top: 15px;
-  font-size: 14px;
-}
-
-.auth-text a {
-  color: #fff;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
+/* ============================= */
+/* PROFILE SECTION               */
+/* ============================= */
 .profile-section {
-  min-height: 80vh;
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 60px;
-  padding: 80px 60px;
+  padding: 60px 40px;
   background: linear-gradient(180deg, #f6f0ff, #ffffff);
+  flex-wrap: wrap; /* makes it responsive */
 }
 
+/* PROFILE CARD (LEFT BOX) */
 .profile-card {
-  width: 320px;
-  height: 400px;
+  width: 300px;
+  padding: 25px;
   text-align: center;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
 }
 
 .profile-avatar {
@@ -270,45 +226,14 @@ footer {
   object-fit: cover;
   margin-bottom: 15px;
   border: 4px solid #e6ccff;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.profile-card h3 {
-  margin-top: 10px;
-  font-size: 1.4rem;
-  color: #6a0dad;
-}
-
-.profile-card p {
-  margin-top: 6px;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.profile-info {
-  width: 420px;
-  height: 400px;
-  text-align: left;
-}
-
-.profile-info h3 {
-  color: #6a0dad;
-  margin-bottom: 15px;
-  font-size: 1.3rem;
-}
-
-.profile-info p {
-  line-height: 1.7;
-  color: #444;
-  margin-bottom: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 .settings-btn {
+  display: inline-block;
   margin-top: 20px;
-  display: block;
-  text-align: center;
-  padding: 14px 30px;
-  border-radius: 60px;
+  padding: 12px 28px;
+  border-radius: 50px;
   background: linear-gradient(135deg, #6a0dad, #b87cca);
   color: white;
   text-decoration: none;
@@ -321,89 +246,585 @@ footer {
   box-shadow: 0 10px 22px rgba(106, 13, 173, 0.35);
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f7f7fb;
-  color: #333;
-}
-
-header {
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header a {
-  text-decoration: none;
-  color: #6a0dad;
-  font-weight: 500;
-}
-
-.features {
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.box {
+/* PROFILE INFO (RIGHT BOX) */
+.profile-info {
   width: 420px;
-  background: #fff;
+  max-width: 100%;
+  padding: 25px;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.profile-info h3 {
+  color: #6a0dad;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.profile-info p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* ============================= */
+/* FOOTER                        */
+/* ============================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #390768, #5a189a);
+  color: white;
+  margin-top: auto; 
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN             */
+/* ============================= */
+@media screen and (max-width: 900px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .profile-card, .profile-info {
+    width: 90%;
+  }
+}
+
+/* ============================= */
+/* RESPONSIVE                     */
+/* ============================= */
+@media screen and (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .hero-right {
+    width: 100%;
+    transform: translateX(0);
+    margin-top: 40px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 20px;
+  }
+}
+
+/* ============================= */
+/* AUTH PAGE                      */
+/* ============================= */
+.auth-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("img/purfle.jpg") no-repeat center/cover;
+}
+
+.auth-box {
+  width: 350px;
   padding: 30px;
-  border-radius: 20px;
-  text-align: left;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  text-align: center;
+  color: #fff;
 }
 
-.box h3 {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-top: 20px;
-  font-weight: 500;
-}
-
-input,
-select {
+.auth-box input,
+.auth-box button {
   width: 100%;
   padding: 12px;
-  margin-top: 8px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.auth-box button:hover {
+  background: #0056b3;
+}
+
+.auth-text {
+  margin-top: 15px;
   font-size: 14px;
 }
 
-small {
-  display: block;
-  margin-top: 6px;
-  color: #777;
-  font-size: 12px;
+.auth-text a {
+  color: #fff;
+  text-decoration: underline;
 }
 
-button {
-  margin-top: 30px;
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 30px;
+/* ============================= */
+/* BACK HOME BUTTON               */
+/* ============================= */
+.back-home-btn {
+  display: inline-block;
+  padding: 14px 32px;
   background: linear-gradient(135deg, #6a0dad, #b87cca);
   color: white;
-  font-size: 16px;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 30px;
+  margin-top: 40px;
+  box-shadow: 0 6px 12px rgba(106,13,173,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
-button:hover {
+.back-home-btn:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 30px rgba(106,13,173,0.35);
   opacity: 0.9;
 }
 
-footer {
+/* ============================= */
+/* ADMIN DASHBOARD STYLES        */
+/* ============================= */
+.admin-page {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #c77dff, #6a0dad, #b87cca, #7b2cbf);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 20px;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #666;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
+/* Gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Headings and paragraphs */
+.admin-page h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.admin-page p {
+  font-size: 1.2rem;
+  margin: 5px 0 15px 0;
+}
+
+/* Horizontal rule */
+.admin-page hr {
+  width: 60%;
+  margin: 30px auto;
+  border: 0;
+  height: 2px;
+  background: linear-gradient(135deg,#6a0dad,#b87cca);
+  border-radius: 1px;
+}
+
+/* Menu buttons */
+.admin-page ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.admin-page ul li a {
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#ffffff,#e6ccff);
+  color: #4b1c6f;
+  font-weight: 500;
+  font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.admin-page ul li a:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.35);
+  background: linear-gradient(135deg,#d7b3ff,#b87cca);
+  color: white;
+}
+
+/* Back to home button */
+.admin-page .back-home-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #6a0dad, #b87cca);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 6px 12px rgba(106, 13, 173, 0.25);
+  margin-top: 40px;
+}
+
+.admin-page .back-home-btn:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 30px rgba(106, 13, 173, 0.35);
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .admin-page ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .admin-page ul li a {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  .admin-page .back-home-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+/* ============================= */
+/* ADMIN DASHBOARD & MANAGE USERS
+   Scoped to .admin-page to prevent conflicts with landing page
+   ============================= */
+.admin-page {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #c77dff, #6a0dad, #b87cca, #7b2cbf);
+  background-size: 400% 400%;
+  animation: adminGradientMove 15s ease infinite;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 60px;
+  text-align: center;
+}
+
+/* Animated gradient for admin pages */
+@keyframes adminGradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container for admin content (Dashboard, Manage Users, Add User) */
+.admin-page .admin-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #fff;
+}
+
+/* Titles and paragraphs */
+.admin-page h1,
+.admin-page .admin-container h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.admin-page p,
+.admin-page .admin-container p {
+  font-size: 1.1rem;
+  color: #f0e6ff;
+  margin-bottom: 20px;
+}
+
+/* Horizontal rule */
+.admin-page hr {
+  width: 60%;
+  margin: 30px auto;
+  border: 0;
+  height: 2px;
+  background: linear-gradient(135deg,#6a0dad,#b87cca);
+  border-radius: 1px;
+}
+
+/* Menu buttons */
+.admin-page ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.admin-page ul li a {
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: linear-gradient(135deg,#ffffff,#e6ccff);
+  color: #4b1c6f;
+  font-weight: 500;
+  font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.admin-page ul li a:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.35);
+  background: linear-gradient(135deg,#d7b3ff,#b87cca);
+  color: white;
+}
+
+/* Back buttons */
+.admin-page .back-home-btn,
+.admin-page .back-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #6a0dad, #b87cca);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 6px 12px rgba(106, 13, 173, 0.25);
+}
+
+.admin-page .back-home-btn:hover,
+.admin-page .back-link:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 30px rgba(106, 13, 173, 0.35);
+  opacity: 0.9;
+}
+
+/* Tables */
+.admin-page .admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.admin-page .admin-table th {
+  background: linear-gradient(135deg,#6a0dad,#b87cca);
+  color: white;
+  padding: 12px;
+  font-weight: 500;
+}
+
+.admin-page .admin-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+}
+
+.admin-page .admin-table tr:hover {
+  background: rgba(255,255,255,0.1);
+  cursor: pointer;
+}
+
+/* Delete button */
+.admin-page .delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.admin-page .delete-btn:hover {
+  background: #e03152;
+  transform: scale(1.05);
+}
+
+/* Add User form button */
+.admin-page .add-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #6a0dad;
+  color: white;
+  font-weight: 500;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-page .add-btn:hover {
+  background: #b87cca;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .admin-page ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .admin-page ul li a,
+  .admin-page .back-home-btn,
+  .admin-page .back-link {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  .admin-page .admin-table th,
+  .admin-page .admin-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* ============================= */
+/* MANAGE USERS PAGE STYLES      */
+/* ============================= */
+.admin-page .admin-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #fff;
+}
+
+.admin-page .admin-container h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.admin-page .admin-container p {
+  font-size: 1.1rem;
+  color: #f0e6ff;
+  margin-bottom: 20px;
+}
+
+/* ============================= */
+/* USERS TABLE                   */
+/* ============================= */
+.admin-page .admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.admin-page .admin-table th {
+  background: linear-gradient(135deg,#6a0dad,#b87cca);
+  color: white;
+  padding: 12px;
+  font-weight: 500;
+}
+
+.admin-page .admin-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+}
+
+.admin-page .admin-table tr:hover {
+  background: rgba(255,255,255,0.1);
+  cursor: pointer;
+}
+
+/* ============================= */
+/* DELETE BUTTON                 */
+/* ============================= */
+.admin-page .delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.admin-page .delete-btn:hover {
+  background: #e03152;
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* BACK TO DASHBOARD LINK         */
+/* ============================= */
+.admin-page .back-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #6a0dad, #b87cca);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 6px 12px rgba(106, 13, 173, 0.25);
+}
+
+.admin-page .back-link:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 30px rgba(106, 13, 173, 0.35);
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* RESPONSIVE TABLE              */
+/* ============================= */
+@media screen and (max-width: 600px) {
+  .admin-page .admin-table th,
+  .admin-page .admin-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .admin-page .delete-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .admin-page .back-link {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+}

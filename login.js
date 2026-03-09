@@ -11,7 +11,6 @@ loginForm.addEventListener("submit", function (e) {
 
   let isValid = true;
 
-  // Clear previous errors
   loginEmailError.textContent = "";
   loginPasswordError.textContent = "";
 
@@ -21,7 +20,8 @@ loginForm.addEventListener("submit", function (e) {
   if (loginEmail.value.trim() === "") {
     loginEmailError.textContent = "Email is required";
     isValid = false;
-  } else if (!loginEmail.value.match(emailPattern)) {
+  } 
+  else if (!loginEmail.value.match(emailPattern)) {
     loginEmailError.textContent = "Enter a valid email";
     isValid = false;
   }
@@ -30,14 +30,30 @@ loginForm.addEventListener("submit", function (e) {
   if (loginPassword.value.trim() === "") {
     loginPasswordError.textContent = "Password is required";
     isValid = false;
-  } else if (loginPassword.value.length < 6) {
+  } 
+  else if (loginPassword.value.length < 6) {
     loginPasswordError.textContent = "Password must be at least 6 characters";
     isValid = false;
   }
 
-  // If valid → redirect
   if (isValid) {
-    alert("Login successful!");
-    window.location.href = "profile.html";
+
+    const email = loginEmail.value.trim();
+    const password = loginPassword.value.trim();
+
+    // Admin Login
+    if (email === "carlajane@hnu.edu.ph" && password === "admin323") {
+      localStorage.setItem("role", "admin");
+      alert("Admin login successful!");
+      window.location.href = "admin.html";
+    }
+
+    // Normal User Login
+    else {
+      localStorage.setItem("role", "user");
+      alert("Login successful!");
+      window.location.href = "profile.html";
+    }
+
   }
 });
