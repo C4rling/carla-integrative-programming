@@ -114,3 +114,4 @@ Yes. I used AI to help me with the coding
 
 # Learning Reflection
 In this activity, I extended my existing web project by implementing basic admin pages. This exercise helped me understand how administrative functionality is added to real-world applications.
+
