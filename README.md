@@ -1,4 +1,4 @@
-﻿# Activity 1
+# Activity 1
 
 # Project Title 
 Volt Vault
@@ -93,3 +93,24 @@ Yes. I used AI to help me use Javascript.
 
 # Learning Reflection
 I learned how to connect javascript to html and also how to use javascript in additional.
+
+-------------------------------------------------
+
+# Activity 5
+
+# Activity Name
+Create Admin Pages
+
+# Description
+Added html pages for admin such as admin, manage users, and add users. This is a seperate page for only the admins.
+
+# Technologies Used
+- HTML
+- CSS
+- Java Script
+
+# AI Assistance Disclosure
+Yes. I used AI to help me with the coding
+
+# Learning Reflection
+In this activity, I extended my existing web project by implementing basic admin pages. This exercise helped me understand how administrative functionality is added to real-world applications.
