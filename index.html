@@ -9,6 +9,32 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Optional inline styling to make buttons side by side */
+      .hero-buttons {
+        margin-top: 20px;
+      }
+      .hero-buttons button {
+        margin-right: 10px;
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.3s ease;
+      }
+      .hero-buttons button:hover {
+        opacity: 0.85;
+      }
+      .sign-in-btn {
+        background: linear-gradient(135deg,#6a0dad,#b87cca);
+        color: white;
+      }
+      .log-in-btn {
+        background: linear-gradient(135deg,#ffffff,#e6ccff);
+        color: #4b1c6f;
+      }
+    </style>
   </head>
   <body>
    
@@ -19,12 +45,10 @@
         <a href="#">Products</a>
         <a href="#">FAQ</a>
         <a href="#">Contact</a>
-        <a href="login.html">Log in</a>
         <a href="gadget-search.html">Search</a>
       </nav>
     </header>
 
-   
     <section class="hero">
       <div class="hero-left">
         <h1>Smart Gadgets. Smarter Living</h1>
@@ -32,7 +56,12 @@
           Upgrade your lifestyle with innovative gadgets designed for
           convenience, performance, and every day comfort.
         </p>
-        <a href="signin.html"><button>Sign in</button></a>
+
+        <!-- Buttons side by side -->
+        <div class="hero-buttons">
+          <a href="signin.html"><button class="sign-in-btn">Sign Up</button></a>
+          <a href="login.html"><button class="log-in-btn">Log In</button></a>
+        </div>
        
       </div>
 
@@ -67,36 +96,34 @@
       </div>
     </section>
 
-<section class="categories">
+    <section class="categories">
+      <h2>Shop by Category</h2>
 
-  <h2>Shop by Category</h2>
+      <div class="category-container">
+        <div class="category-card">
+          <h3>Audio</h3>
+          <p>Headphones, earbuds, speakers</p>
+        </div>
 
-  <div class="category-container">
+        <div class="category-card">
+          <h3>Wearables</h3>
+          <p>Smartwatches, fitness trackers</p>
+        </div>
 
-    <div class="category-card">
-      <h3>Audio</h3>
-      <p>Headphones, earbuds, speakers</p>
-    </div>
+        <div class="category-card">
+          <h3>Gaming</h3>
+          <p>Controllers, mice, keyboards</p>
+        </div>
 
-    <div class="category-card">
-      <h3>Wearables</h3>
-      <p>Smartwatches, fitness trackers</p>
-    </div>
-
-    <div class="category-card">
-      <h3>Gaming</h3>
-      <p>Controllers, mice, keyboards</p>
-    </div>
-
-    <div class="category-card">
-      <h3>Accessories</h3>
-      <p>Chargers, cables, power banks</p>
-    </div>
-
-  </div>
+        <div class="category-card">
+          <h3>Accessories</h3>
+          <p>Chargers, cables, power banks</p>
+        </div>
+      </div>
+    </section>
 
     <footer>
-      <p">© 2026 Volt Vault. Carla Jane C. Clarabal .</p>
+      <p>© 2026 Volt Vault. Carla Jane C. Clarabal.</p>
     </footer>
   </body>
 </html>

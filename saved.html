@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Saved Gadgets</title>
+<style>
+  body { font-family:'Poppins',sans-serif; background: linear-gradient(-45deg,#c77dff,#6a0dad,#b87cca,#7b2cbf); color:white; text-align:center; padding:40px; min-height:100vh; }
+  #savedResults { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:30px; }
+  .card { width:220px; padding:20px; border-radius:16px; background:linear-gradient(135deg,#f6f0ff,#ffffff); color:#333; text-align:center; box-shadow:0 6px 16px rgba(0,0,0,0.1); }
+  .card img { width:100%; height:160px; object-fit:cover; border-radius:12px; margin-bottom:10px; }
+  .back-home-btn { display:inline-block; margin-top:40px; padding:14px 32px; background:linear-gradient(135deg,#6a0dad,#b87cca); color:white; text-decoration:none; border-radius:30px; transition:0.3s ease; }
+  .back-home-btn:hover { transform:translateY(-4px) scale(1.03); box-shadow:0 16px 30px rgba(106,13,173,0.35); opacity:0.9; }
+</style>
+</head>
+<body>
+  <h1>Saved Gadgets</h1>
+ <div id="savedResults"></div>
+<a href="gadget-search.html" class="back-home-btn">⬅ Back to Search</a>
+<script src="saved.js"></script>
+</body>
+</html>
